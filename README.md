@@ -45,3 +45,17 @@ python MCN_refresh.py
     *   Tách riêng script cho TAP và MCN.
     *   Cập nhật logic "Move Back" (Cut) để bảo vệ phân quyền file.
     *   Push code lên GitHub.
+
+## ⏰ Tự động hóa (Task Scheduler)
+
+Dự án đã được cấu hình chạy tự động trên Windows Task Scheduler:
+
+| Task Name | Script | Thời gian chạy | Lặp lại |
+| :--- | :--- | :--- | :--- |
+| **EC_TAP_Refresh_Auto** | `TAP_refresh.py` | 20:00 (8:00 PM) | Chủ Nhật, Thứ 2 |
+| **EC_MCN_Refresh_Auto** | `MCN_refresh.py` | 20:40 (8:40 PM) | Chủ Nhật, Thứ 2 |
+
+**Cấu hình Action:**
+*   **Program/script:** `C:\Users\Admin\AppData\Local\Microsoft\WindowsApps\python.exe`
+*   **Start in:** `C:\EC_project\EC refresh TSP`
+*   **Add arguments:** `TAP_refresh.py` (hoặc `MCN_refresh.py`)
