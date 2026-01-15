@@ -1,0 +1,4 @@
+Copy TAP/
+Copy MCN/
+__pycache__/
+*.pyc
